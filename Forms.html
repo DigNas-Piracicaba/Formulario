@@ -6,24 +6,168 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DigNas</title>
 </head>
-<body>
-    <div class="container">
-        <header class="header">
-            <h1 id="title">
-                DigNas
-            </h1>
-            <p id="Description">
-                Preencha o formulário com as informações mais importantes
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1 id="title">
+                    DigNas
+                </h1>
+                <p id="Description">
+                    Preencha o formulário com as informações mais importantes
+                </p>
+            </header>
+            <form action="" id="survey-form">
+                <div class="form-group">
+                    <label for="Nome">Nome</label>
+                    <input id="Nome" type="text" name="Nome" class="formControl" placeholder="Insira seu nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="DataNascimento">Data de Nascimento</label>
+                    <input id="DataNascimento" type="date" name="DataNascimento" class="formControl" placeholder="Insira sua data de nascimento" required>
+                </div>
+
+        
+
+        <div>
+            <p>
+                Insira outras informações necessárias
             </p>
-        </header>
-        <form action="" id="survey-form">
-            <div class="form-group">
-                <label for="Nome">Nome</label>
-                <input type="text"
-                name="Nome" id="Nome" class="formControl" placeholder="Insira seu nome" required>
-            </div>
+        </div>
+
+        <div>
+            <label for="Etnia">Etnia</label>
+            <select name="Etnia" id="Etnia" class="formControl" placeholder="Selecione sua etnia" required>
+                <option value="InsiraEtnia">Selecione sua etnia</option>
+                <option value="Branca">Branca</option>
+                <option value="Preta">Preta</option>
+                <option value="Parda">Parda</option>
+                <option value="Indígena">Indígena</option>
+                <option value="Amarela">Amarela</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="Renda">Renda</label>
+            <select name="Renda" id="Renda" class="formControl" placeholder="Selecione sua renda mensal" required>
+                <option value="InsiraRenda">Selecione sua renda mensal</option>
+                <option value="1">Até um salário mínimo</option>
+                <option value="2">De um a três salários mínimos</option>
+                <option value="3">De três a cinco salários mínimos</option>
+                <option value="4">De cinco a sete salários mínimos</option>
+                <option value="5">De sete a dez salários mínimos</option>
+                <option value="6">Mais de dez salários mínimos</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="Escolaridade">Escolaridade</label>
+            <select name="Escolaridade" id="Escolaridade" class="formControl" placeholder="Selecione sua escolaridade" required>
+                <option value="InsiraEscolaridade">Selecione sua escolaridade</option>
+                <option value="Basica">Básica</option>
+                <option value="Fundamental">Fundamental</option>
+                <option value="Medio">Médio</option>
+                <option value="EnsinoTec">Ensino Técnico</option>
+                <option value="SuperiorIncomp">Superior Incompleto</option>
+                <option value="SuperiorComp">Superior Completo</option>
+                <option value="PosGrad">Pós Graduação</option>
+                <option value="Mestrado">Mestrado</option>
+                <option value="Doutorado">Doutorado</option>
+            </select>
+        </div>
+
+        <form>
+            <INPUT type="radio" name="opcao" value="op1"> Sim
+            <INPUT type="radio" name="opcao" value="op2"> Não
         </form>
-    </div>
+    </body>
+</html>
+------------------------------------------------------------------------------------------------------
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Teste</title>
+</head>
+
+<body>
+	<!--Importando Script Jquery-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<!--Formulário-->
+	<form>
+		<label for="cep">CEP</label>
+		<input id="cep" type="text" required/>
+		<label for="logradouro">Logradouro</label>
+		<input id="logradouro" type="text" required/>
+		<label for="numero">Número</label>
+		<input id="numero" type="text" />
+		<label for="complemento">Complemento</label>
+		<input id="complemento" type="text"/>
+		<label for="bairro">Bairro</label>
+		<input id="bairro" type="text" required/>
+        <label for="cidade">Cidade</label>
+		<input id="cidade" type="text" required/>
+		<label for="uf">Estado</label>
+		<select id="uf">
+			<option value="AC">Acre</option>
+			<option value="AL">Alagoas</option>
+			<option value="AP">Amapá</option>
+			<option value="AM">Amazonas</option>
+			<option value="BA">Bahia</option>
+			<option value="CE">Ceará</option>
+			<option value="DF">Distrito Federal</option>
+			<option value="ES">Espírito Santo</option>
+			<option value="GO">Goiás</option>
+			<option value="MA">Maranhão</option>
+			<option value="MT">Mato Grosso</option>
+			<option value="MS">Mato Grosso do Sul</option>
+			<option value="MG">Minas Gerais</option>
+			<option value="PA">Pará</option>
+			<option value="PB">Paraíba</option>
+			<option value="PR">Paraná</option>
+			<option value="PE">Pernambuco</option>
+			<option value="PI">Piauí</option>
+			<option value="RJ">Rio de Janeiro</option>
+			<option value="RN">Rio Grande do Norte</option>
+			<option value="RS">Rio Grande do Sul</option>
+			<option value="RO">Rondônia</option>
+			<option value="RR">Roraima</option>
+			<option value="SC">Santa Catarina</option>
+			<option value="SP">São Paulo</option>
+			<option value="SE">Sergipe</option>
+			<option value="TO">Tocantins</option>
+		</select>
+	</form>
+	
+	<script type="text/javascript">
+		$("#cep").focusout(function(){
+			//Início do Comando AJAX
+			$.ajax({
+				//O campo URL diz o caminho de onde virá os dados
+				//É importante concatenar o valor digitado no CEP
+				url: 'https://viacep.com.br/ws/'+$(this).val()+'/json/unicode/',
+				//Aqui você deve preencher o tipo de dados que será lido,
+				//no caso, estamos lendo JSON.
+				dataType: 'json',
+				//SUCESS é referente a função que será executada caso
+				//ele consiga ler a fonte de dados com sucesso.
+				//O parâmetro dentro da função se refere ao nome da variável
+				//que você vai dar para ler esse objeto.
+				success: function(resposta){
+					//Agora basta definir os valores que você deseja preencher
+					//automaticamente nos campos acima.
+					$("#logradouro").val(resposta.logradouro);
+					$("#bairro").val(resposta.bairro);
+					$("#cidade").val(resposta.localidade);
+					$("#uf").val(resposta.uf);
+					//Vamos incluir para que o Número seja focado automaticamente
+					//melhorando a experiência do usuário
+					$("#numero").focus();
+				}
+			});
+		});
+	</script>
 </body>
 </html>
 
@@ -40,7 +184,7 @@ Estado
 
 --------------
 
-Etnia - Opções: Branca; Preta; Parda; Indígena;
+Etnia - Opções: Branca; Preta; Parda; Indígena; Amarela;
 Renda - Opções: Até 1 salário mínimo; 1 a 3 salários mínimos; 3 a 5 salários mínimos; 5 a 7 salários mínimos; ...
 Grau de escolaridade - 
 Filhos?
