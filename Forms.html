@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DigNas</title>
 </head>
+
     <body>
         <div class="container">
+
             <header class="header">
                 <h1 id="title">
                     DigNas
@@ -16,8 +18,18 @@
                     Preencha o formulário com as informações mais importantes
                 </p>
             </header>
+
+            
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+            <script type="text/javascript">
+                $("#Telefone").mask("(00) 0000-0000");
+                $("#Celular").mask("(00) 0 0000-0000");
+            </script>
             <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
             <form action="" id="survey-form">
+
                 <div class="form-group">
                     <label for="Nome">Nome</label>
                     <input id="Nome" type="text" name="Nome" class="formControl" placeholder="Insira seu nome" required>
@@ -28,21 +40,36 @@
                     <input id="DataNascimento" type="date" name="DataNascimento" class="formControl" placeholder="Insira sua data de nascimento" required>
                 </div>
 
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <input id="Telefone" type="tel" name="Telefone" class="formControl" placeholder="Insira seu telefone">
+                </div>
+
+                <div class="form-group">
+                    <label for="celular">Celular</label>
+                    <input id="Celular" type="tel" name="Celular" class="formControl" placeholder="Insira seu número de celular">
+                </div>
 
                 <div>
                 
 		            <label for="cep">CEP</label>
-		            <input id="cep" type="text" required/>
-		            <label for="logradouro">Logradouro</label>
-		            <input id="logradouro" type="text" required/>
+		            <input id="cep" type="number" name="CEP" class="formControl" placeholder="Insira seu CEP" required/>
+
+		            <label for="rua">Rua</label>
+		            <input id="Rua" type="text" name="Rua" class="formControl" placeholder="Insira sua rua" required/>
+
 		            <label for="numero">Número</label>
-		            <input id="numero" type="text" />
+		            <input id="numero" type="text" name="Numero" class="formControl" placeholder="Insira o número da sua residência" required/>
+
 		            <label for="complemento">Complemento</label>
-		            <input id="complemento" type="text"/>
+		            <input id="complemento" type="text" name="Complemento" class="formControl" placeholder="Insira o complemento da sua residência" required/>
+
 		            <label for="bairro">Bairro</label>
-		            <input id="bairro" type="text" required/>
+		            <input id="bairro" type="text" name="Bairro" class="formControl" placeholder="Insira seu bairro" required/>
+
                     <label for="cidade">Cidade</label>
-		            <input id="cidade" type="text" required/>
+		            <input id="cidade" type="text" name="Cidade" class="formControl" placeholder="Insira sua cidade" required/>
+
 		            <label for="uf">Estado</label>
 		            <select id="uf">
 			            <option value="AC">Acre</option>
@@ -74,7 +101,6 @@
 			            <option value="TO">Tocantins</option>
 		            </select>
                 </div>
-
 
             </form>
 
@@ -159,5 +185,6 @@
             <INPUT type="radio" name="opcao" value="op1"> Sim
             <INPUT type="radio" name="opcao" value="op2"> Não
         </form>
+        
     </body>
 </html>
