@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Forms.css" rel="stylesheet">
     <title>DigNas</title>
 </head>
 
 <body>
+
     <main class="container">
         <!--div que engloba tudo-->
+
 
         <header class="header">
             <h1>
@@ -20,15 +22,13 @@
             <p>
                 Preencha o formulário com as informações mais importantes
             </p>
-        </header>
+        </header><br/>
 
         <!--Início da implementação de scripts-->
 
         <!--Início do script para as máscaras-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <!--Script para as máscaras-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
-        <!--Script para as máscaras-->
         <script type="text/javascript">
             $("#Telefone").mask("(00) 0000-0000");
             $("#Celular").mask("(00) 0 0000-0000");
@@ -41,73 +41,73 @@
 
         <!--Fim da implementação de scripts-->
 
-        <form action="">
+        <form action="" class="form">
             <!--form engloba tudo-->
 
             <div class="input-field">
                 <!--Campo para Nome-->
-                <label for="nome">Nome</label>
+                <label for="nome">Nome</label><br/>
                 <input id="nome" type="text" name="nome" placeholder="Insira seu nome" required>
             </div>
 
             <div class="input-field">
                 <!--Campo para Data de Nascimento-->
-                <label for="dataNascimento">Data de Nascimento</label>
+                <label for="dataNascimento">Data de Nascimento</label><br/>
                 <input id="dataNascimento" type="date" name="dataNascimento" placeholder="Insira sua data de nascimento" required>
             </div>
 
             <div class="input-field">
                 <!--Campo para Telefone-->
-                <label for="telefone">Telefone</label>
+                <label for="telefone">Telefone</label><br/>
                 <input id="telefone" type="tel" name="telefone" placeholder="Insira seu telefone">
             </div>
 
             <div class="input-field">
                 <!--Campo para Celular-->
-                <label for="celular">Celular</label>
+                <label for="celular">Celular</label><br/>
                 <input id="celular" type="tel" name="celular" placeholder="Insira seu número de celular">
             </div>
 
             <div class="input-field">
                 <!--Campo para CEP-->
-                <label for="cep">CEP</label>
+                <label for="cep">CEP</label><br/>
                 <input id="cep" type="number" name="cep" placeholder="Insira seu CEP" required/>
             </div>
 
-            <div class="input-field"></div>
-            <!--Campo para Rua-->
-            <label for="rua">Rua</label>
-            <input id="logradouro" type="text" name="logradouro" placeholder="Insira sua rua" required/>
+            <div class="input-field">
+                <!--Campo para Rua-->
+                <label for="rua">Rua</label><br/>
+                <input id="logradouro" type="text" name="logradouro" placeholder="Insira sua rua" required/>
             </div>
 
-            <div class="input-field"></div>
-            <!--Campo para Número da casa-->
-            <label for="numero">Número</label>
-            <input id="numero" type="text" name="numero" placeholder="Insira o número da sua residência" required/>
+            <div class="input-field">
+                <!--Campo para Número da casa-->
+                <label for="numero">Número</label><br/>
+                <input id="numero" type="text" name="numero" placeholder="Insira o número da sua residência" required/>
             </div>
 
-            <div class="input-field"></div>
-            <!--Campo para Complemento da casa-->
-            <label for="complemento">Complemento</label>
-            <input id="complemento" type="text" name="complemento" placeholder="Insira o complemento da sua residência" required/>
+            <div class="input-field">
+                <!--Campo para Complemento da casa-->
+                <label for="complemento">Complemento</label><br/>
+                <input id="complemento" type="text" name="complemento" placeholder="Insira o complemento da sua residência" required/>
             </div>
 
-            <div class="input-field"></div>
-            <!--Campo para Bairro-->
-            <label for="bairro">Bairro</label>
-            <input id="bairro" type="text" name="bairro" placeholder="Insira seu bairro" required/>
+            <div class="input-field">
+                <!--Campo para Bairro-->
+                <label for="bairro">Bairro</label><br/>
+                <input id="bairro" type="text" name="bairro" placeholder="Insira seu bairro" required/>
             </div>
 
-            <div class="input-field"></div>
-            <!--Campo para Cidade-->
-            <label for="cidade">Cidade</label>
-            <input id="cidade" type="text" name="cidade" placeholder="Insira sua cidade" required/>
+            <div class="input-field">
+                <!--Campo para Cidade-->
+                <label for="cidade">Cidade</label><br/>
+                <input id="cidade" type="text" name="cidade" placeholder="Insira sua cidade" required/>
             </div>
 
-            <div class="input-field"></div>
-            <!--Campo para Estado-->
-            <label for="uf">Estado</label>
-            <select id="uf">
+            <div class="input-field">
+                <!--Campo para Estado-->
+                <label for="uf">Estado</label><br/>
+                <select id="uf">
                     <option value="AC">Acre</option>
                     <option value="AL">Alagoas</option>
                     <option value="AP">Amapá</option>
@@ -171,15 +171,9 @@
 
             <!--Fim do script para recuperar as informações para preenchimento automátioco pelo CEP-->
 
-            <div>
-                <p>
-                    Insira outras informações necessárias
-                </p>
-            </div>
-
             <div class="input-field">
                 <!--Campo para Etnia-->
-                <label for="etnia">Etnia</label>
+                <label for="etnia">Etnia</label><br/>
                 <select name="etnia" id="etnia" placeholder="Selecione sua etnia" required>
                     <option value="InsiraEtnia">Selecione sua etnia</option>
                     <option value="Branca">Branca</option>
@@ -192,7 +186,7 @@
 
             <div class="input-field">
                 <!--Campo para Renda-->
-                <label for="renda">Renda</label>
+                <label for="renda">Renda</label><br/>
                 <select name="renda" id="renda" placeholder="Selecione sua renda mensal" required>
                     <option value="InsiraRenda">Selecione sua renda mensal</option>
                     <option value="1">Até um salário mínimo</option>
@@ -206,7 +200,7 @@
 
             <div class="input-field">
                 <!--Campo para Escolaridade-->
-                <label for="escolaridade">Escolaridade</label>
+                <label for="escolaridade">Escolaridade</label><br/>
                 <select name="escolaridade" id="escolaridade" placeholder="Selecione sua escolaridade" required>
                     <option value="InsiraEscolaridade">Selecione sua escolaridade</option>
                     <option value="Basica">Básica</option>
@@ -223,7 +217,7 @@
 
             <div class="input-field">
                 <!--Campo para Filhos-->
-                <label for="filhos">Possui filhos?</label>
+                <label for="filhos">Possui filhos?</label><br/>
                 <INPUT type="radio" name="opcao" value="op1"> Sim
                 <INPUT type="radio" name="opcao" value="op2"> Não
             </div>

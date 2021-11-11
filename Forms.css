@@ -9,16 +9,30 @@
 
 body {
     background-color: #FEE2CA;
-}
-
-.cointainer {
+    min-height: 100vh;
+    min-width: 100vw;
     display: flex;
+    align-items: center;
     justify-content: center;
-    width: 100%;
-    margin-top: 100 px;
 }
 
-.card {
-    background-color: #ffffff80;
-    padding: 30 px
+.header {
+    background-color: #FEE2CA;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+main.container {
+    max-width: 450px;
+}
+
+.form {
+    background: white;
+    box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.input-field {
+    position: relative;
+    margin-bottom: 10px;
 }
