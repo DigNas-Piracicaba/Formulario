@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap%27');
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Open Sans';
+}
+
+body {
+    background-color: #FEE2CA;
+}
+
+.cointainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100 px;
+}
+
+.card {
+    background-color: #ffffff80;
+    padding: 30 px
+}
