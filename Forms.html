@@ -39,7 +39,11 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <!--Início do script para as preencher o CEP-->
 
-        <!--Fim da implementação de scripts-->
+        <!--Início dos scripts de hide and show options-->
+        <script src="Forms.js"></script>
+        <!--Fim do script-->
+
+        <!--Fim da implementação de scripts de hide and show options-->
 
         <form action="" class="form">
             <!--form engloba tudo-->
@@ -181,13 +185,19 @@
             <div class="input-field">
                 <!--Campo para gênero-->
                 <label for="genero">Gênero</label><br/>
-                <select name="genero" id="genero" placeholder="Selecione o gênero com o qual se identifica" required>
+                <select name="genero" id="genero" placeholder="Selecione o gênero com o qual se identifica" onchange="showDiv('genero_outro', this)" required>
                     <option disabled selected value>Selecione seu gênero</option>
                     <option value="Homem">Homem</option>
                     <option value="Mulher">Mulher</option>
                     <option value="Outro">Outro</option>
                     <option value="Prefiro_nao">Prefiro não responder</option>
                 </select>
+            </div>
+
+            <div id="genero_outro" class="input-field">
+                <!--Campo para Especificar Gênero-->
+                <label for="outro_gen">Qual gênero você se identifica?</label><br/>
+                <input id="outro_gen" type="text" name="outro_gen" placeholder="Especifique">
             </div>
 
             <div class="input-field">
@@ -204,7 +214,7 @@
             </div>
 
             <div class="input-field">
-                <!--Campo para Etnia-->
+                <!--Campo para Estado Civil-->
                 <label for="estado_civil">Estado Civíl</label><br/>
                 <select name="estado_civil" id="estado_civil" placeholder="Selecione seu estado civíl" required>
                     <option disabled selected value>Selecione seu estado civíl</option>
@@ -218,40 +228,50 @@
 
             <div class="input-field">
                 <!--Campo para Escolaridade-->
-                <label for="escolaridade">Escolaridade</label><br/>
+                <label for="escolaridade">Grau de escolaridade</label><br/>
                 <select name="escolaridade" id="escolaridade" placeholder="Selecione sua escolaridade" required>
                     <option disabled selected value>Selecione sua escolaridade</option>
-                    <option value="Basica">Básica</option>
-                    <option value="Fundamental">Fundamental</option>
-                    <option value="Medio">Médio</option>
-                    <option value="EnsinoTec">Ensino Técnico</option>
-                    <option value="SuperiorIncomp">Superior Incompleto</option>
-                    <option value="SuperiorComp">Superior Completo</option>
-                    <option value="PosGrad">Pós Graduação</option>
-                    <option value="Mestrado">Mestrado</option>
-                    <option value="Doutorado">Doutorado</option>
+                    <option value="Fund_Incom">Ensino fundamental incompleto</option>
+                    <option value="Fund_Com">Ensino fundamental completo</option>
+                    <option value="Medio_Incom">Ensino médio incompleto</option>
+                    <option value="Medio_Cursan">Ensino médio em andamento</option>
+                    <option value="Medio_Com">Ensino médio completo</option>
+                    <option value="Superior_Incomp">Ensino superior incompleto</option>
+                    <option value="Superior_Curs">Ensino superior em andamento</option>
+                    <option value="Superior_Comp">Ensino superior completo</option>
                 </select>
             </div>
 
             <div class="input-field">
-                <!--Campo para Renda-->
-                <label for="renda">Renda</label><br/>
-                <select name="renda" id="renda" placeholder="Selecione sua renda mensal" required>
-                    <option disabled selected value>Selecione sua renda mensal</option>
-                    <option value="1">Até um salário mínimo</option>
-                    <option value="2">De um a três salários mínimos</option>
-                    <option value="3">De três a cinco salários mínimos</option>
-                    <option value="4">De cinco a sete salários mínimos</option>
-                    <option value="5">De sete a dez salários mínimos</option>
-                    <option value="6">Mais de dez salários mínimos</option>
-                </select>
+                <!--Campo para Apoio financeiro-->
+                <label for="apoio_finan">Você tem o apoio financeiro de alguém que confie? Essas pessoas moram próximo a você?</label><br/>
+                <INPUT type="radio" name="opcao_apoio_financeiro" value="op1"> Não tenho apoio
+                <INPUT type="radio" name="opcao_apoio_financeiro" value="op2"> Sim, moram próximos
+                <INPUT type="radio" name="opcao_apoio_financeiro" value="op2"> Sim, moram longe
+            </div>
+
+            <div class="input-field">
+                <!--Campo para rede de telefone-->
+                <label for="possui_rede_celular">A propriedade em que reside tem rede de telefone celular?</label><br/>
+                <INPUT type="radio" name="opcao_rede_celular" value="op1"> Sim
+                <INPUT type="radio" name="opcao_rede_celular" value="op2"> Não
+            </div>
+
+            <div class="input-field">
+                <!--Campo para Número da casa-->
+                <label for="dist_cidade">Em média qual é a distância da sua moradia até a cidade?</label><br/>
+                <input id="dist_cidade" type="number" name="dist_cidade" placeholder="Distância até a cidade" required/>
             </div>
 
             <div class="input-field">
                 <!--Campo para Filhos-->
                 <label for="filhos">Possui filhos?</label><br/>
-                <INPUT type="radio" name="opcao" value="op1"> Sim
-                <INPUT type="radio" name="opcao" value="op2"> Não
+                <INPUT id="opcao_filho_sim" type="radio" name="opcao" value="op1" onclick="javascript:yesnoCheck();"> Sim
+                <INPUT id="opcao_filho_nao" type="radio" name="opcao" value="op2"> Não
+            </div>
+
+            <div id="se_sim" style="visibility:hidden">
+                Quantos? <input type='number' id='quantos_filhos' name='quantos_filhos'><br>
             </div>
 
         </form>
