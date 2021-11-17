@@ -51,24 +51,6 @@
             </div>
 
             <div class="input-field">
-                <!--Campo para Data de Nascimento-->
-                <label for="dataNascimento">Data de Nascimento</label><br/>
-                <input id="dataNascimento" type="date" name="dataNascimento" placeholder="Insira sua data de nascimento" required>
-            </div>
-
-            <div class="input-field">
-                <!--Campo para Telefone-->
-                <label for="telefone">Telefone</label><br/>
-                <input id="telefone" type="tel" name="telefone" placeholder="Insira seu telefone">
-            </div>
-
-            <div class="input-field">
-                <!--Campo para Celular-->
-                <label for="celular">Celular</label><br/>
-                <input id="celular" type="tel" name="celular" placeholder="Insira seu número de celular">
-            </div>
-
-            <div class="input-field">
                 <!--Campo para CEP-->
                 <label for="cep">CEP</label><br/>
                 <input id="cep" type="number" name="cep" placeholder="Insira seu CEP" required/>
@@ -139,6 +121,30 @@
                 </select>
             </div>
 
+            <div class="input-field">
+                <!--Campo para Telefone-->
+                <label for="telefone">Telefone</label><br/>
+                <input id="telefone" type="tel" name="telefone" placeholder="Insira seu telefone">
+            </div>
+
+            <div class="input-field">
+                <!--Campo para Celular-->
+                <label for="celular">Celular</label><br/>
+                <input id="celular" type="tel" name="celular" placeholder="Insira seu número de celular">
+            </div>
+
+            <div class="input-field">
+                <!--Campo para E-mail-->
+                <label for="email">Email</label><br/>
+                <input id="email" type="email" name="email" placeholder="Insira seu e-mail" required>
+            </div>
+
+            <div class="input-field">
+                <!--Campo para Data de Nascimento-->
+                <label for="dataNascimento">Data de Nascimento</label><br/>
+                <input id="dataNascimento" type="date" name="dataNascimento" placeholder="Insira sua data de nascimento" required>
+            </div>
+
             <!--Início do script para recuperar as informações para preenchimento automátioco pelo CEP-->
 
             <script type="text/javascript">
@@ -173,8 +179,20 @@
             <!--Fim do script para recuperar as informações para preenchimento automátioco pelo CEP-->
 
             <div class="input-field">
+                <!--Campo para gênero-->
+                <label for="genero">Gênero</label><br/>
+                <select name="genero" id="genero" placeholder="Selecione o gênero com o qual se identifica" required>
+                    <option disabled selected value>Selecione seu gênero</option>
+                    <option value="Homem">Homem</option>
+                    <option value="Mulher">Mulher</option>
+                    <option value="Outro">Outro</option>
+                    <option value="Prefiro_nao">Prefiro não responder</option>
+                </select>
+            </div>
+
+            <div class="input-field">
                 <!--Campo para Etnia-->
-                <label for="etnia">Etnia</label><br/>
+                <label for="etnia">Cor ou Raça</label><br/>
                 <select name="etnia" id="etnia" placeholder="Selecione sua etnia" required>
                     <option disabled selected value>Selecione sua etnia</option>
                     <option value="Branca">Branca</option>
@@ -186,16 +204,15 @@
             </div>
 
             <div class="input-field">
-                <!--Campo para Renda-->
-                <label for="renda">Renda</label><br/>
-                <select name="renda" id="renda" placeholder="Selecione sua renda mensal" required>
-                    <option disabled selected value>Selecione sua renda mensal</option>
-                    <option value="1">Até um salário mínimo</option>
-                    <option value="2">De um a três salários mínimos</option>
-                    <option value="3">De três a cinco salários mínimos</option>
-                    <option value="4">De cinco a sete salários mínimos</option>
-                    <option value="5">De sete a dez salários mínimos</option>
-                    <option value="6">Mais de dez salários mínimos</option>
+                <!--Campo para Etnia-->
+                <label for="estado_civil">Estado Civíl</label><br/>
+                <select name="estado_civil" id="estado_civil" placeholder="Selecione seu estado civíl" required>
+                    <option disabled selected value>Selecione seu estado civíl</option>
+                    <option value="Solteir">Solteira(o)</option>
+                    <option value="Casad">Casada(o)</option>
+                    <option value="Separad">Separada(o)</option>
+                    <option value="Divorciad">Divorciada(o)</option>
+                    <option value="Viuv">Viuva(o)</option>
                 </select>
             </div>
 
@@ -213,6 +230,20 @@
                     <option value="PosGrad">Pós Graduação</option>
                     <option value="Mestrado">Mestrado</option>
                     <option value="Doutorado">Doutorado</option>
+                </select>
+            </div>
+
+            <div class="input-field">
+                <!--Campo para Renda-->
+                <label for="renda">Renda</label><br/>
+                <select name="renda" id="renda" placeholder="Selecione sua renda mensal" required>
+                    <option disabled selected value>Selecione sua renda mensal</option>
+                    <option value="1">Até um salário mínimo</option>
+                    <option value="2">De um a três salários mínimos</option>
+                    <option value="3">De três a cinco salários mínimos</option>
+                    <option value="4">De cinco a sete salários mínimos</option>
+                    <option value="5">De sete a dez salários mínimos</option>
+                    <option value="6">Mais de dez salários mínimos</option>
                 </select>
             </div>
 
