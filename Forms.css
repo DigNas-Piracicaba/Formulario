@@ -23,16 +23,40 @@ body {
 }
 
 main.container {
+    box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.2);
     max-width: 450px;
 }
 
 .form {
-    background: white;
-    box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0);
     border-radius: 8px;
 }
 
 .input-field {
     position: relative;
     margin-bottom: 10px;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+::-webkit-datetime-edit-month-field {
+    color: grey;
+}
+
+::-webkit-datetime-edit-day-field {
+    color: grey;
+}
+
+::-webkit-datetime-edit-year-field {
+    color: grey;
+}
+
+::-webkit-datetime-edit-text {
+    color: grey;
+}
+
+label {
+    line-height: 2;
 }

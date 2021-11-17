@@ -30,8 +30,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
         <script type="text/javascript">
-            $("#Telefone").mask("(00) 0000-0000");
-            $("#Celular").mask("(00) 0 0000-0000");
+            $("#telefone").mask("(00) 0000-0000");
+            $("#celular").mask("(00) 0 0000-0000");
         </script>
         <!--Fim do script para as máscaras-->
 
@@ -108,6 +108,7 @@
                 <!--Campo para Estado-->
                 <label for="uf">Estado</label><br/>
                 <select id="uf">
+                    <option disabled selected value>Selecione o Estado</option>
                     <option value="AC">Acre</option>
                     <option value="AL">Alagoas</option>
                     <option value="AP">Amapá</option>
@@ -175,7 +176,7 @@
                 <!--Campo para Etnia-->
                 <label for="etnia">Etnia</label><br/>
                 <select name="etnia" id="etnia" placeholder="Selecione sua etnia" required>
-                    <option value="InsiraEtnia">Selecione sua etnia</option>
+                    <option disabled selected value>Selecione sua etnia</option>
                     <option value="Branca">Branca</option>
                     <option value="Preta">Preta</option>
                     <option value="Parda">Parda</option>
@@ -188,7 +189,7 @@
                 <!--Campo para Renda-->
                 <label for="renda">Renda</label><br/>
                 <select name="renda" id="renda" placeholder="Selecione sua renda mensal" required>
-                    <option value="InsiraRenda">Selecione sua renda mensal</option>
+                    <option disabled selected value>Selecione sua renda mensal</option>
                     <option value="1">Até um salário mínimo</option>
                     <option value="2">De um a três salários mínimos</option>
                     <option value="3">De três a cinco salários mínimos</option>
@@ -202,7 +203,7 @@
                 <!--Campo para Escolaridade-->
                 <label for="escolaridade">Escolaridade</label><br/>
                 <select name="escolaridade" id="escolaridade" placeholder="Selecione sua escolaridade" required>
-                    <option value="InsiraEscolaridade">Selecione sua escolaridade</option>
+                    <option disabled selected value>Selecione sua escolaridade</option>
                     <option value="Basica">Básica</option>
                     <option value="Fundamental">Fundamental</option>
                     <option value="Medio">Médio</option>
